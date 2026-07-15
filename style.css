@@ -1,0 +1,40 @@
+body {
+  overflow: hidden;
+  background-color: #0e319c;
+  height: 100vh;
+}
+
+.raindrop,
+.raindropWind {
+  width: 2px;
+  height: 15px;
+  position: absolute;
+  background-color: white;
+  top: -15px;
+}
+
+.raindrop {
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+.raindropWind {
+  animation: windFall linear infinite;
+}
+
+@keyframes windFall {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(110vh) translateX(300px);
+  }
+}
