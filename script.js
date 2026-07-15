@@ -10,7 +10,7 @@ function createRaindrop() {
   }, duration * 1000);
 }
 
-function createRaindropFall() {
+function createRaindropW() {
   const raindropW = document.createElement("div");
   raindropW.classList.add("raindropWind");
   raindropW.style.left = Math.random() * (window.innerWidth + 200) - 100 + "px";
@@ -26,7 +26,7 @@ function randomRain() {
   if (Math.random() < 0.5) {
     createRaindrop();
   } else {
-    createRaindropFall();
+    createRaindropW();
   }
   const randomDelay = Math.random() * 140 + 25;
   setTimeout(randomRain, randomDelay);
