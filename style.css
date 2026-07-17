@@ -35,6 +35,6 @@ body {
     transform: translateY(0) translateX(0);
   }
   to {
-    transform: translateY(110vh) translateX(300px);
+    transform: translateY(110vh) translateX(150px);
   }
 }
