@@ -1,3 +1,11 @@
+let isWindy = false;
+
+function updateWeather() {
+  isWindy = Math.random() < 0.5;
+  const nextChange = Math.random() * 4000 + 3000;
+  setTimeout(updateWeather, nextChange);
+}
+
 function createRaindrop() {
   const raindrop = document.createElement("div");
   raindrop.classList.add("raindrop");
@@ -23,13 +31,14 @@ function createRaindropW() {
 }
 
 function randomRain() {
-  if (Math.random() < 0.5) {
-    createRaindrop();
-  } else {
+  if (isWindy) {
     createRaindropW();
+  } else {
+    createRaindrop();
   }
-  const randomDelay = Math.random() * 140 + 25;
+  const randomDelay = Math.random() * 40 + 5;
   setTimeout(randomRain, randomDelay);
 }
 
+updateWeather();
 randomRain();
